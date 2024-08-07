@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Title</title>
 </head>
 <body>
-$END$
+<table border="1">
+  <thead>
+  <tr>
+    <th *ngFor="let col of collectionEntries[0].Cols">
+      {{ col }}
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of collectionEntries[1].Fields">
+    <td *ngFor="let field of user">
+      {{ field }}
+    </td>
+  </tr>
+  </tbody>
+</table>
 </body>
 </html>
